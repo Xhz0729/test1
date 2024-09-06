@@ -21,12 +21,12 @@ const UserForm = (props) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Please enter your name"
+          placeholder="Please enter your name to start"
           className="input"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <button type="submit">Send</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

@@ -34,8 +34,6 @@ const Quiz = () => {
     } else {
       alert(`The right answer is ${questions[questionIdx].correct_answer}`);
     }
-    // Use the updated score for the alert
-    alert(`Your current score is ${updatedScore}`);
 
     // Move to the next question
     setQuestionIdx(questionIdx + 1);
@@ -50,21 +48,26 @@ const Quiz = () => {
   };
 
   return (
-    <div>
+    <div className="quiz">
       {/* Render your quiz questions */}
       {questions.length > 0 ? (
         <div>
           {/* Quiz logic goes here */}
-          <h1>{questions[questionIdx].question}</h1>
+          <h2>{questions[questionIdx].question}</h2>
           <div className="options">
             <button onClick={() => setOptionChosen("True")}>True</button>
             <button onClick={() => setOptionChosen("False")}>False</button>
           </div>
+          <div className="nextBtn">
           {questionIdx === questions.length - 1 ? (
-            <button onClick={finishQuiz}> Finish Quiz </button>
+            <button onClick={finishQuiz} className="finishBtn"> Finish Quiz </button>
           ) : (
-            <button onClick={nextQuestion}>Next question</button>
+            <button onClick={nextQuestion} className="nextBtn">Next question</button>
           )}
+          </div>
+          <div className="score">
+            <h2>Your current score is {score}</h2>
+          </div>
         </div>
       ) : (
         <p>Loading questions...</p>
