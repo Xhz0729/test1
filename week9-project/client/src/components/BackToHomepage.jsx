@@ -18,7 +18,7 @@ const BackToHomepage = ({ dispatch }) => {
       };
   return (
     <div>
-        <button onClick={handleClick}>Homepage</button>
+        <button onClick={handleClick} className='backBtn'>Homepage</button>
     </div>
   )
 }

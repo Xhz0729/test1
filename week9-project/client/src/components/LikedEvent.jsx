@@ -17,9 +17,9 @@ const LikedEvent = ({ dispatch }) => {
 
 
   return (
-    <div>
+    <div className='likedEvent'>
       <p>Click the button to display all your liked events!</p>
-      <button onClick={handleClick}>Liked Events</button>
+      <button onClick={handleClick}>Liked</button>
     </div>
   );
 };
