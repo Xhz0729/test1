@@ -24,7 +24,7 @@ const SearchEvent = ({ dispatch }) => {
   };
 
   return (
-    <div>
+    <div className="search">
       <form onSubmit={handleSearch}>
         <input
           type="text"
@@ -32,7 +32,7 @@ const SearchEvent = ({ dispatch }) => {
           value={term}
           onChange={(e) => setTerm(e.target.value)} // Update state as user types
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="searchButton">Search</button>
       </form>
     </div>
   );

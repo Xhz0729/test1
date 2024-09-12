@@ -24,32 +24,34 @@ const AddEventForm = ({ dispatch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Event name"
-        value={formData.name}
-        onChange={e => setFormData({ ...formData, name: e.target.value })}
-      />
-      <input
-        type="text"
-        placeholder="Description"
-        value={formData.description}
-        onChange={e => setFormData({ ...formData, description: e.target.value })}
-      />
-      <input
-        type="date"
-        value={formData.date}
-        onChange={e => setFormData({ ...formData, date: e.target.value })}
-      />
-      <input
-        type="text"
-        placeholder="Location"
-        value={formData.location}
-        onChange={e => setFormData({ ...formData, location: e.target.value })}
-      />
-      <button type="submit">Add Event</button>
-    </form>
+    <div className='addEventForm'>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Event name"
+          value={formData.name}
+          onChange={e => setFormData({ ...formData, name: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Description"
+          value={formData.description}
+          onChange={e => setFormData({ ...formData, description: e.target.value })}
+        />
+        <input
+          type="date"
+          value={formData.date}
+          onChange={e => setFormData({ ...formData, date: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Location"
+          value={formData.location}
+          onChange={e => setFormData({ ...formData, location: e.target.value })}
+        />
+        <button type="submit">Add Event</button>
+      </form>
+    </div>
   );
 };
 

@@ -5,6 +5,7 @@ import SearchEvent from './components/SearchEvent';
 import LikedEvent from './components/LIkedEvent';
 import { EventContext } from "./Helper/Context";
 import BackToHomepage from './components/BackToHomepage';
+import './App.css'
 
 const eventReducer = (state, action) => {
   switch (action.type) {
@@ -42,7 +43,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className='app'>
       <h1>Event Management</h1>
       <EventContext.Provider
         value={{ gameState, setGameState}}

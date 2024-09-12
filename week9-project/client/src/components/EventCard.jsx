@@ -23,7 +23,7 @@ const EventCard = ({ event, dispatch }) => {
   };
   
   return (
-    <div>
+    <div className="eventCard">
       {isEditing ? (
         <EditEventForm event={event} dispatch={dispatch} setIsEditing={setIsEditing} />
       ) : (
@@ -31,7 +31,7 @@ const EventCard = ({ event, dispatch }) => {
           <h3>{event.name}</h3>
           <p>{event.description}</p>
           <p>{new Date(event.date).toLocaleDateString()}</p> {/* Make sure date is valid */}
-          <p>{event.location}</p>
+          <p className="location">{event.location}</p>
           <button onClick={handleDelete}>Delete</button>
           <button onClick={() => setIsEditing(true)}>Edit</button>
           <button onClick={handleFavorite}>
